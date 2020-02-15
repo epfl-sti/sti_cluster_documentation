@@ -6,8 +6,15 @@
 Welcome to STI Cluster documentation's documentation!
 =====================================================
 
+.. warning:: The documentation is still under construction.
+
+.. image:: img/imgix-tebFqdANuxs-unsplash.jpg
+
 .. toctree::
    :maxdepth: 2
+
+   technical_documentation/vagrant
+
    :caption: Contents:
 
 
