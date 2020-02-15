@@ -7,6 +7,8 @@ verify_ssl = true
 
 [packages]
 sphinx = "*"
+sphinx-rtd-theme = "*"
+recommonmark = "*"
 
 [requires]
 python_version = "3.8"
