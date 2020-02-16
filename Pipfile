@@ -9,6 +9,7 @@ verify_ssl = true
 sphinx = "*"
 sphinx-rtd-theme = "*"
 recommonmark = "*"
+sphinx-markdown-tables = "*"
 
 [requires]
 python_version = "3.8"

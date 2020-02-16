@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "07ff1f6760456032a31ea0793d737d1c0c487b2bca89e4f3a6de46b06bc25bdb"
+            "sha256": "297310966a9b278bcb52fa514de64d1368c55de4b7a2745d05b7be46aa76de06"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -78,6 +78,13 @@
                 "sha256:b0eaf100007721b5c16c1fc1eecb87409464edc10469ddc9a22a27a99123be49"
             ],
             "version": "==2.11.1"
+        },
+        "markdown": {
+            "hashes": [
+                "sha256:c00429bd503a47ec88d5e30a751e147dcb4c6889663cd3e2ba0afe858e009baa",
+                "sha256:d02e0f9b04c500cde6637c11ad7c72671f359b87b9fe924b2383649d8841db7c"
+            ],
+            "version": "==3.0.1"
         },
         "markupsafe": {
             "hashes": [
@@ -181,6 +188,14 @@
             ],
             "index": "pypi",
             "version": "==2.4.1"
+        },
+        "sphinx-markdown-tables": {
+            "hashes": [
+                "sha256:08779e77832b6562b6b86e4270ae50b0b10010fdd35cf9aadcb5b8246571b933",
+                "sha256:ecfc7fd2e02c339fcf12eb9cbcf59fedeb5ff54b6fe666df6e0791a03ece9b05"
+            ],
+            "index": "pypi",
+            "version": "==0.0.12"
         },
         "sphinx-rtd-theme": {
             "hashes": [
