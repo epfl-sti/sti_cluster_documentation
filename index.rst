@@ -12,10 +12,16 @@ Welcome to STI Cluster documentation's documentation!
 
 .. toctree::
    :maxdepth: 2
+   :caption: Contents:
 
+   project_organization/project_objectives
+   project_organization/project_steps
+   project_organization/project_team
+   project_organization/project_changes
+   technical_documentation/technical_choices
+   technical_documentation/environments
    technical_documentation/vagrant
 
-   :caption: Contents:
 
 
 
