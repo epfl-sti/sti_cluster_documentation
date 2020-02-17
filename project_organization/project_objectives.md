@@ -2,7 +2,7 @@
 
 Due to an increasing need for computation at the School of Engineering, we have decided to launch a school dedicated computing cluster.
 
-Given it a harduous task, we have decided to join the IC cluster and leverage their expertise on the topic. Therefore, our current machines are hosted within the IC cluster.
+Given it is a harduous task, we have decided to join the IC cluster and leverage their expertise on the topic. Therefore, our current machines are hosted within the IC cluster.
 
 Doing so provides several benefits such as:
 
