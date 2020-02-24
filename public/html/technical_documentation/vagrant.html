@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Vagrant &mdash; STI Cluster documentation 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Environments" href="environments.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> STI Cluster documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../project_organization/project_objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project_organization/project_steps.html">Project steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project_organization/project_team.html">Project team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project_organization/project_changes.html">Project changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technical_choices.html">Technical choices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environments.html">Environments</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Vagrant</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-vagrantfile">The Vagrantfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#starting-your-vm-s">Starting your VM(s)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connect-to-your-vm-via-ssh">Connect to your VM via SSH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#managing-snapshots">Managing snapshots</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-snapshot">creating a snapshot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#restoring-the-machine-to-a-given-snapshot">restoring the machine to a given snapshot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting-a-snapshot">deleting a snapshot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#detroying-the-vm-s">detroying the VM(s)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">STI Cluster documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Vagrant</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/technical_documentation/vagrant.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vagrant">
+<h1>Vagrant<a class="headerlink" href="#vagrant" title="Permalink to this headline">¶</a></h1>
+<p>Vagrant is a great tool to automate the creattion of virtual machines.</p>
+<p>Once you have VirtualBox and Vagrant installed on your machine, it is really quick and easy to create a new VM, manage snapshots of this machine, destroy it and start over.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>VirtualBox can be found here: <a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a></p>
+<p>Vagrant can be found here: <a class="reference external" href="https://www.vagrantup.com/">https://www.vagrantup.com/</a></p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-vagrantfile">
+<h3>The Vagrantfile<a class="headerlink" href="#the-vagrantfile" title="Permalink to this headline">¶</a></h3>
+<p>Every aspects of your virtual machines are managed through a <code class="docutils literal notranslate"><span class="pre">Vagrantfile</span></code></p>
+<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="no">VAGRANTFILE_API_VERSION</span> <span class="o">=</span> <span class="s2">&quot;2&quot;</span>
+
+<span class="no">Vagrant</span><span class="o">.</span><span class="n">require_version</span> <span class="s2">&quot;&gt;= 1.5.0&quot;</span>
+
+<span class="no">Vagrant</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="no">VAGRANTFILE_API_VERSION</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+
+	<span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="s2">&quot;ubuntu/bionic64&quot;</span>
+
+	<span class="c1"># Turn off shared folders</span>
+	<span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">synced_folder</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;/vagrant&quot;</span><span class="p">,</span> <span class="ss">disabled</span><span class="p">:</span> <span class="kp">true</span>
+
+	<span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span> <span class="s2">&quot;shell&quot;</span> <span class="k">do</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span>
+		<span class="n">ssh_pub_key</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">readlines</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">#{</span><span class="no">Dir</span><span class="o">.</span><span class="n">home</span><span class="si">}</span><span class="s2">/.ssh/id_rsa.pub&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="o">.</span><span class="n">strip</span>
+		<span class="n">s</span><span class="o">.</span><span class="n">inline</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="dl">SHELL</span>
+<span class="sh">			echo #{ssh_pub_key} &gt;&gt; /home/ubuntu/.ssh/authorized_keys</span>
+<span class="dl">		SHELL</span>
+	<span class="k">end</span>
+
+	<span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">define</span> <span class="s2">&quot;sti-cluster-node-01.vagrant&quot;</span> <span class="k">do</span> <span class="o">|</span><span class="n">node4_config</span><span class="o">|</span>
+		<span class="n">node4_config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">hostname</span> <span class="o">=</span> <span class="s2">&quot;sti-cluster-node-01.vagrant&quot;</span>
+		<span class="n">node4_config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">network</span> <span class="ss">:private_network</span><span class="p">,</span> <span class="ss">ip</span><span class="p">:</span> <span class="s2">&quot;192.168.50.10&quot;</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="starting-your-vm-s">
+<h3>Starting your VM(s)<a class="headerlink" href="#starting-your-vm-s" title="Permalink to this headline">¶</a></h3>
+<p>You can start your VM(s) by simply calling:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant up
+</pre></div>
+</div>
+<p><img alt="vagrant up" src="../_images/vagrant_up.gif" /></p>
+</div>
+<div class="section" id="connect-to-your-vm-via-ssh">
+<h3>Connect to your VM via SSH<a class="headerlink" href="#connect-to-your-vm-via-ssh" title="Permalink to this headline">¶</a></h3>
+<p>You can either connect through the built-in command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant ssh
+</pre></div>
+</div>
+<p>or via a <em>regular</em> ssh command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh ubuntu@192.168.50.10
+</pre></div>
+</div>
+<blockquote>
+<div><p>it may be useful to change you <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> file to make sure the fingerprint of the server does not get recorded. It can become quite painful to re-edit your <code class="docutils literal notranslate"><span class="pre">~/.ssh/known_hosts</span></code> every time your re-spawn a VM.</p>
+</div></blockquote>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Host <span class="m">192</span>.168.50.*
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+</pre></div>
+</div>
+</div></blockquote>
+<p><img alt="vagrant ssh" src="../_images/vagrant_ssh.gif" /></p>
+</div>
+<div class="section" id="managing-snapshots">
+<h3>Managing snapshots<a class="headerlink" href="#managing-snapshots" title="Permalink to this headline">¶</a></h3>
+<p>Managing snaphots is also straightforward.</p>
+<div class="section" id="creating-a-snapshot">
+<h4>creating a snapshot<a class="headerlink" href="#creating-a-snapshot" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant snapshot save &lt;name&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="restoring-the-machine-to-a-given-snapshot">
+<h4>restoring the machine to a given snapshot<a class="headerlink" href="#restoring-the-machine-to-a-given-snapshot" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant snapshot restore &lt;name&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="deleting-a-snapshot">
+<h4>deleting a snapshot<a class="headerlink" href="#deleting-a-snapshot" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant snapshot delete &lt;name&gt;
+</pre></div>
+</div>
+<p><img alt="vagrant snapshots" src="../_images/vagrant_snapshot.gif" /></p>
+</div>
+</div>
+<div class="section" id="detroying-the-vm-s">
+<h3>detroying the VM(s)<a class="headerlink" href="#detroying-the-vm-s" title="Permalink to this headline">¶</a></h3>
+<p>Again, this can be easily done by issuing:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant destroy
+</pre></div>
+</div>
+<p><img alt="vagrant destroy" src="../_images/vagrant_destroy.gif" /></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="environments.html" class="btn btn-neutral float-left" title="Environments" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Emmanuel Jaep
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
