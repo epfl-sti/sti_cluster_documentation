@@ -30,3 +30,7 @@ This tool is only used on the dev environment. It is used to quickly spawn new v
 ### Ansible
 
 Ansible will be used to deploy applications and settings to the various machines. Since it requires an ssh access to the machines, it integrates nicely with what the IC cluster is providing.
+
+## target environments
+
+Since all STI clusters machines are based on Ubuntu, all deliverables (scripts / Ansible playbooks / configs) are targeted at Ubuntu. This is enough for our current requirements even though it might not address a larger need (Lab / STI / EPFL specific needs).
