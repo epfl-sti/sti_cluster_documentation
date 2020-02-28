@@ -18,6 +18,7 @@ Welcome to STI Cluster documentation's documentation!
    project_organization/project_steps
    project_organization/project_team
    project_organization/project_changes
+   users_acceptance_tests/involved_laboratories
    technical_documentation/technical_choices
    technical_documentation/environments
    technical_documentation/vagrant
