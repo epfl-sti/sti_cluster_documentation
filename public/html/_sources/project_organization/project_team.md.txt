@@ -11,3 +11,4 @@ The project is composed of the following persons:
 | [Emmanuel Jaep](https://people.epfl.ch/emmanuel.jaep)             | [scrum master](https://www.scrum.org/resources/what-is-a-scrum-master)    |
 | [Alejandro Salamanca](https://people.epfl.ch/alejandro.salamanca) | [development team](https://www.scrumguides.org/scrum-guide.html#team-dev) |
 | [Michael Doche](https://people.epfl.ch/mikael.doche)              | [development team](https://www.scrumguides.org/scrum-guide.html#team-dev) |
+| [Dimitri Colier](https://people.epfl.ch/dimitri.colier)           | [development team](https://www.scrumguides.org/scrum-guide.html#team-dev) |
