@@ -24,6 +24,7 @@ Welcome to STI Cluster documentation's documentation!
    technical_documentation/technical_choices
    technical_documentation/environments
    technical_documentation/vagrant
+   technical_documentation/secrets_encryption
    changelog
 
 
