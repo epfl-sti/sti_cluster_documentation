@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Environments &mdash; STI Cluster documentation 0.0.1 documentation</title>
+  <title>UAT feedback from Virginia Bordignon &mdash; STI Cluster documentation 0.0.1 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Vagrant" href="vagrant.html" />
-    <link rel="prev" title="Technical choices" href="technical_choices.html" /> 
+    <link rel="next" title="Technical choices" href="../technical_documentation/technical_choices.html" />
+    <link rel="prev" title="UAT feedback from Clément, Vignac" href="clement_vignac.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,17 +86,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../project_organization/project_steps.html">Project steps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../project_organization/project_team.html">Project team</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../project_organization/project_changes.html">Project changes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../users_acceptance_tests/involved_laboratories.html">Tests made by end-users (Users Acceptance Tests)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../users_acceptance_tests/clement_vignac.html">UAT feedback from Clément, Vignac</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../users_acceptance_tests/virginia_bordignon.html">UAT feedback from Virginia Bordignon</a></li>
-<li class="toctree-l1"><a class="reference internal" href="technical_choices.html">Technical choices</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Environments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#production">Production</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#test">Test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#dev">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="involved_laboratories.html">Tests made by end-users (Users Acceptance Tests)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clement_vignac.html">UAT feedback from Clément, Vignac</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">UAT feedback from Virginia Bordignon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#context">Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overall-feeling">Overall feeling</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="vagrant.html">Vagrant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../technical_documentation/technical_choices.html">Technical choices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../technical_documentation/environments.html">Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../technical_documentation/vagrant.html">Vagrant</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">changelog of the documentation</a></li>
 </ul>
 
@@ -143,13 +142,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Environments</li>
+      <li>UAT feedback from Virginia Bordignon</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/technical_documentation/environments.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/users_acceptance_tests/virginia_bordignon.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -162,20 +161,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="environments">
-<h1>Environments<a class="headerlink" href="#environments" title="Permalink to this headline">¶</a></h1>
-<p>In order to be able to move forward while already providing the service to our customers, we need 3 environments: dev / test / production.</p>
-<div class="section" id="production">
-<h2>Production<a class="headerlink" href="#production" title="Permalink to this headline">¶</a></h2>
-<p>This environment is composed of 4 servers located in the IC cluster. Since this environment is customer facing, no work from the team can be done here.</p>
+  <div class="section" id="uat-feedback-from-virginia-bordignon">
+<h1>UAT feedback from <a class="reference external" href="https://people.epfl.ch/virginia.bordignon">Virginia Bordignon</a><a class="headerlink" href="#uat-feedback-from-virginia-bordignon" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<p>Lab: ASL</p>
 </div>
-<div class="section" id="test">
-<h2>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
-<p>This is scaled down version of the production environment. It is composed of 2 physical servers located in the IC cluster. It can be used for integration testing and customer acceptance tests.</p>
-</div>
-<div class="section" id="dev">
-<h2>Dev<a class="headerlink" href="#dev" title="Permalink to this headline">¶</a></h2>
-<p>Since we are mainly working on packaging application and settings through the use of Ansible, we can work locally with VirtualBox and Vagrant to ease up the spawn, work, rince and re-spawn process.</p>
+<div class="section" id="overall-feeling">
+<h2>Overall feeling<a class="headerlink" href="#overall-feeling" title="Permalink to this headline">¶</a></h2>
+<p>didn’t have time to test.</p>
 </div>
 </div>
 
@@ -187,10 +181,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="vagrant.html" class="btn btn-neutral float-right" title="Vagrant" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../technical_documentation/technical_choices.html" class="btn btn-neutral float-right" title="Technical choices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="technical_choices.html" class="btn btn-neutral float-left" title="Technical choices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="clement_vignac.html" class="btn btn-neutral float-left" title="UAT feedback from Clément, Vignac" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
