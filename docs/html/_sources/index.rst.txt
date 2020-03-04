@@ -13,19 +13,10 @@ Welcome to STI Cluster documentation's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :glob:
 
-   project_organization/project_objectives
-   project_organization/project_steps
-   project_organization/project_team
-   project_organization/project_changes
-   users_acceptance_tests/involved_laboratories
-   users_acceptance_tests/clement_vignac
-   users_acceptance_tests/virginia_bordignon
-   technical_documentation/technical_choices
-   technical_documentation/environments
-   technical_documentation/vagrant
-   technical_documentation/secrets_encryption
-   changelog
+   */*
+   *
 
 
 
