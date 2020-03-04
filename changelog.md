@@ -1,6 +1,9 @@
 # changelog of the documentation
 
-04.03.20: Decision made about the [encryption of secrets](./technical_documentation/technical_choices.html#ansible-vault)
+04.03.20: Update the list of testers for ASL
+
+Decision made about the [encryption of secrets](./technical_documentation/technical_choices.html#ansible-vault)
+
 Decision made about the [Root access](./technical_documentation/technical_choices.html#root-access) given to customers
 
 ---
