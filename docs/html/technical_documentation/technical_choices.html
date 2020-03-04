@@ -94,9 +94,14 @@
 <li class="toctree-l2"><a class="reference internal" href="#tools">Tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#vagrant">Vagrant</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ansible">Ansible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ansible-vault">Ansible vault</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#target-environments">target environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#end-user-environment">End user environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#root-access">Root access</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="environments.html">Environments</a></li>
@@ -199,10 +204,22 @@
 <h3>Ansible<a class="headerlink" href="#ansible" title="Permalink to this headline">¶</a></h3>
 <p>Ansible will be used to deploy applications and settings to the various machines. Since it requires an ssh access to the machines, it integrates nicely with what the IC cluster is providing.</p>
 </div>
+<div class="section" id="ansible-vault">
+<h3>Ansible vault<a class="headerlink" href="#ansible-vault" title="Permalink to this headline">¶</a></h3>
+<p>In order to encrypt secrets (such as keytab files or licenses), we decided to use <a class="reference internal" href="secrets_encryption.html"><span class="doc">Ansible Vault</span></a>.</p>
+</div>
 </div>
 <div class="section" id="target-environments">
 <h2>target environments<a class="headerlink" href="#target-environments" title="Permalink to this headline">¶</a></h2>
 <p>Since all STI clusters machines are based on Ubuntu, all deliverables (scripts / Ansible playbooks / configs) are targeted at Ubuntu. This is enough for our current requirements even though it might not address a larger need (Lab / STI / EPFL specific needs).</p>
+</div>
+<div class="section" id="end-user-environment">
+<h2>End user environment<a class="headerlink" href="#end-user-environment" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="root-access">
+<h3>Root access<a class="headerlink" href="#root-access" title="Permalink to this headline">¶</a></h3>
+<p>We decided to give Root access to the machines because our customers will have to be able to install packages specific to their needs.</p>
+<p>However, we will not be able to provide support for any issue they may have with any package. Support will therefore be provided on a <strong>best effort</strong> basis. If a customer asks for support with a package or a configuration that is <em>not supported</em>, we will ultimately re-stage (reformat the machine) to a <em>standard</em> state. <strong>This process will erase all data and configuration added by the customer</strong>.</p>
+</div>
 </div>
 </div>
 

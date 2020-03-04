@@ -31,6 +31,18 @@ This tool is only used on the dev environment. It is used to quickly spawn new v
 
 Ansible will be used to deploy applications and settings to the various machines. Since it requires an ssh access to the machines, it integrates nicely with what the IC cluster is providing.
 
+### Ansible vault
+
+In order to encrypt secrets (such as keytab files or licenses), we decided to use [Ansible Vault](secrets_encryption.md).
+
 ## target environments
 
 Since all STI clusters machines are based on Ubuntu, all deliverables (scripts / Ansible playbooks / configs) are targeted at Ubuntu. This is enough for our current requirements even though it might not address a larger need (Lab / STI / EPFL specific needs).
+
+## End user environment
+
+### Root access
+
+We decided to give Root access to the machines because our customers will have to be able to install packages specific to their needs.
+
+However, we will not be able to provide support for any issue they may have with any package. Support will therefore be provided on a **best effort** basis. If a customer asks for support with a package or a configuration that is *not supported*, we will ultimately re-stage (reformat the machine) to a *standard* state. **This process will erase all data and configuration added by the customer**.
